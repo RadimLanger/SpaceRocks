@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5670308F44CFAC9AEEC297FD /* Pods_Space_RocksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB9DC0570EB42DB2543F45C /* Pods_Space_RocksTests.framework */; };
+		5F32D0C9A012E14EDC05AAA8 /* Pods_Space_Rocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA827C39EA2A7C4C23EA5DA4 /* Pods_Space_Rocks.framework */; };
 		D9414B0C20722F8100261462 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9414B0B20722F8100261462 /* AppDelegate.swift */; };
 		D9414B0E20722F8100261462 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9414B0D20722F8100261462 /* ViewController.swift */; };
 		D9414B1120722F8100261462 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9414B0F20722F8100261462 /* Main.storyboard */; };
@@ -27,6 +29,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F5F9FC88A10775FB499F5A7 /* Pods-Space RocksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Space RocksTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Space RocksTests/Pods-Space RocksTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7612D0F5EC2C7344DFA3F2AA /* Pods-Space RocksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Space RocksTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Space RocksTests/Pods-Space RocksTests.release.xcconfig"; sourceTree = "<group>"; };
+		8D80CE5C98F21B525A4AF38D /* Pods-Space Rocks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Space Rocks.release.xcconfig"; path = "Pods/Target Support Files/Pods-Space Rocks/Pods-Space Rocks.release.xcconfig"; sourceTree = "<group>"; };
+		AD7A9C5A3CA4DDCD515B2D95 /* Pods-Space Rocks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Space Rocks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Space Rocks/Pods-Space Rocks.debug.xcconfig"; sourceTree = "<group>"; };
+		CDB9DC0570EB42DB2543F45C /* Pods_Space_RocksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Space_RocksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9414B0820722F8100261462 /* Space Rocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Space Rocks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9414B0B20722F8100261462 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9414B0D20722F8100261462 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +45,7 @@
 		D9414B1F20722F8100261462 /* Space RocksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Space RocksTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9414B2320722F8100261462 /* Space_RocksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space_RocksTests.swift; sourceTree = "<group>"; };
 		D9414B2520722F8100261462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA827C39EA2A7C4C23EA5DA4 /* Pods_Space_Rocks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Space_Rocks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F32D0C9A012E14EDC05AAA8 /* Pods_Space_Rocks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +61,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5670308F44CFAC9AEEC297FD /* Pods_Space_RocksTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		88B762AA8A41E53C34829F97 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD7A9C5A3CA4DDCD515B2D95 /* Pods-Space Rocks.debug.xcconfig */,
+				8D80CE5C98F21B525A4AF38D /* Pods-Space Rocks.release.xcconfig */,
+				1F5F9FC88A10775FB499F5A7 /* Pods-Space RocksTests.debug.xcconfig */,
+				7612D0F5EC2C7344DFA3F2AA /* Pods-Space RocksTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A278826F208C192DE46B61C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA827C39EA2A7C4C23EA5DA4 /* Pods_Space_Rocks.framework */,
+				CDB9DC0570EB42DB2543F45C /* Pods_Space_RocksTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D9414AFF20722F8100261462 = {
 			isa = PBXGroup;
 			children = (
 				D9414B0A20722F8100261462 /* Space Rocks */,
 				D9414B2220722F8100261462 /* Space RocksTests */,
 				D9414B0920722F8100261462 /* Products */,
+				88B762AA8A41E53C34829F97 /* Pods */,
+				A278826F208C192DE46B61C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,9 +138,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9414B2820722F8100261462 /* Build configuration list for PBXNativeTarget "Space Rocks" */;
 			buildPhases = (
+				80232BFC5D6AED83B089B9BA /* [CP] Check Pods Manifest.lock */,
 				D9414B0420722F8100261462 /* Sources */,
 				D9414B0520722F8100261462 /* Frameworks */,
 				D9414B0620722F8100261462 /* Resources */,
+				1C8D4CC422E5504ED067D7C3 /* [CP] Embed Pods Frameworks */,
+				12167B63C1CB43E339B2A668 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,9 +158,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9414B2B20722F8100261462 /* Build configuration list for PBXNativeTarget "Space RocksTests" */;
 			buildPhases = (
+				CEBB5A46AAF3E1185C9763EA /* [CP] Check Pods Manifest.lock */,
 				D9414B1B20722F8100261462 /* Sources */,
 				D9414B1C20722F8100261462 /* Frameworks */,
 				D9414B1D20722F8100261462 /* Resources */,
+				124F4A6DA46D3389966D9B9E /* [CP] Embed Pods Frameworks */,
+				7D484039B5772E3AC0C29198 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,6 +234,115 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12167B63C1CB43E339B2A668 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Space Rocks/Pods-Space Rocks-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		124F4A6DA46D3389966D9B9E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Space RocksTests/Pods-Space RocksTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Space RocksTests/Pods-Space RocksTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1C8D4CC422E5504ED067D7C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Space Rocks/Pods-Space Rocks-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Space Rocks/Pods-Space Rocks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D484039B5772E3AC0C29198 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Space RocksTests/Pods-Space RocksTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80232BFC5D6AED83B089B9BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Space Rocks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEBB5A46AAF3E1185C9763EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Space RocksTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D9414B0420722F8100261462 /* Sources */ = {
@@ -355,6 +502,7 @@
 		};
 		D9414B2920722F8100261462 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD7A9C5A3CA4DDCD515B2D95 /* Pods-Space Rocks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -370,6 +518,7 @@
 		};
 		D9414B2A20722F8100261462 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D80CE5C98F21B525A4AF38D /* Pods-Space Rocks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -385,6 +534,7 @@
 		};
 		D9414B2C20722F8100261462 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F5F9FC88A10775FB499F5A7 /* Pods-Space RocksTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -402,6 +552,7 @@
 		};
 		D9414B2D20722F8100261462 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7612D0F5EC2C7344DFA3F2AA /* Pods-Space RocksTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
