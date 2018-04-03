@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D102" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Meteorite" representedClassName="Meteorite" syncable="YES" codeGenerationType="class"/>
-    <entity name="Meteorites" representedClassName="Meteorites" syncable="YES" codeGenerationType="class"/>
+    <entity name="Meteorite" representedClassName="Meteorite" syncable="YES" codeGenerationType="class">
+        <attribute name="fallInfo" attributeType="String" syncable="YES"/>
+        <attribute name="fallYearDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="latitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mass" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="recClass" attributeType="String" syncable="YES"/>
+        <relationship name="meteorites" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Meteorites" inverseName="meteorites" inverseEntity="Meteorites" syncable="YES"/>
+    </entity>
+    <entity name="Meteorites" representedClassName="Meteorites" syncable="YES" codeGenerationType="class">
+        <attribute name="lastUpdateDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="meteorites" toMany="YES" deletionRule="Nullify" destinationEntity="Meteorite" inverseName="meteorites" inverseEntity="Meteorite" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Meteorite" positionX="-63" positionY="-18" width="128" height="45"/>
-        <element name="Meteorites" positionX="-54" positionY="-9" width="128" height="45"/>
+        <element name="Meteorite" positionX="-63" positionY="-18" width="128" height="180"/>
+        <element name="Meteorites" positionX="-54" positionY="-9" width="128" height="75"/>
     </elements>
 </model>

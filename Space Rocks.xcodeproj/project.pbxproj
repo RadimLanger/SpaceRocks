@@ -16,6 +16,10 @@
 		D9414B1620722F8100261462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9414B1520722F8100261462 /* Assets.xcassets */; };
 		D9414B1920722F8100261462 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9414B1720722F8100261462 /* LaunchScreen.storyboard */; };
 		D9414B2420722F8100261462 /* Space_RocksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9414B2320722F8100261462 /* Space_RocksTests.swift */; };
+		D9BED3BE207236880016F93B /* MeteorsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BED3BD207236880016F93B /* MeteorsLoader.swift */; };
+		D9BED3C020723ECB0016F93B /* CoreDataAccessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BED3BF20723ECB0016F93B /* CoreDataAccessing.swift */; };
+		D9BED3DB207247A10016F93B /* MeteorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BED3DA207247A10016F93B /* MeteorExtension.swift */; };
+		D9BED3DD20724D170016F93B /* SharedDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BED3DC20724D170016F93B /* SharedDateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		D9414B1F20722F8100261462 /* Space RocksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Space RocksTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9414B2320722F8100261462 /* Space_RocksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space_RocksTests.swift; sourceTree = "<group>"; };
 		D9414B2520722F8100261462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9BED3BD207236880016F93B /* MeteorsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MeteorsLoader.swift; path = classes/MeteorsLoader.swift; sourceTree = "<group>"; };
+		D9BED3BF20723ECB0016F93B /* CoreDataAccessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataAccessing.swift; path = classes/CoreDataAccessing.swift; sourceTree = "<group>"; };
+		D9BED3DA207247A10016F93B /* MeteorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MeteorExtension.swift; path = classes/MeteorExtension.swift; sourceTree = "<group>"; };
+		D9BED3DC20724D170016F93B /* SharedDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SharedDateFormatter.swift; path = classes/SharedDateFormatter.swift; sourceTree = "<group>"; };
 		DA827C39EA2A7C4C23EA5DA4 /* Pods_Space_Rocks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Space_Rocks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -118,6 +126,10 @@
 				D9414B1720722F8100261462 /* LaunchScreen.storyboard */,
 				D9414B1A20722F8100261462 /* Info.plist */,
 				D9414B1220722F8100261462 /* Space_Rocks.xcdatamodeld */,
+				D9BED3BD207236880016F93B /* MeteorsLoader.swift */,
+				D9BED3BF20723ECB0016F93B /* CoreDataAccessing.swift */,
+				D9BED3DA207247A10016F93B /* MeteorExtension.swift */,
+				D9BED3DC20724D170016F93B /* SharedDateFormatter.swift */,
 			);
 			path = "Space Rocks";
 			sourceTree = "<group>";
@@ -349,6 +361,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9BED3C020723ECB0016F93B /* CoreDataAccessing.swift in Sources */,
+				D9BED3DB207247A10016F93B /* MeteorExtension.swift in Sources */,
+				D9BED3BE207236880016F93B /* MeteorsLoader.swift in Sources */,
+				D9BED3DD20724D170016F93B /* SharedDateFormatter.swift in Sources */,
 				D9414B1420722F8100261462 /* Space_Rocks.xcdatamodeld in Sources */,
 				D9414B0E20722F8100261462 /* ViewController.swift in Sources */,
 				D9414B0C20722F8100261462 /* AppDelegate.swift in Sources */,
@@ -441,7 +457,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -492,7 +508,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
