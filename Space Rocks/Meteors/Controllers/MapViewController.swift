@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MapViewController.swift
 //  Space Rocks
 //
 //  Created by Radim Langer on 02/04/2018.
@@ -8,11 +8,10 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
 }

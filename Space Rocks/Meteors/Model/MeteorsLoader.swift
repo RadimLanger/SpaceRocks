@@ -10,7 +10,7 @@ import Alamofire
 import SwiftyJSON
 import CoreData
 
-final class MeteorsLoader: CoreDataAccessing {
+final class MeteorsLoader: CoreDataAccessing, DateComponentsAccessing {
 
     var meteorites: Meteorites {
 
@@ -21,6 +21,11 @@ final class MeteorsLoader: CoreDataAccessing {
         }
 
         return meteorites.first!
+    }
+
+
+    var dataAreMoreThanOneDayOld: Bool { // todo: get rid of force unwrapping
+        return calendar.dateComponents([.day], from: meteorites.lastUpdateDate!, to: Date()).day! >= 1
     }
 
     func fetchDataFromAPI() {

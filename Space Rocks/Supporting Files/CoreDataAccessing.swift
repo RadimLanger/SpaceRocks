@@ -13,7 +13,7 @@ protocol CoreDataAccessing: AnyObject {
 
 }
 
-extension CoreDataAccessing {
+extension CoreDataAccessing { // TODO: at se to pak predava v coordinatoru jako dependency
     var coreDataController: CoreDataController {
         return CoreDataController.shared
     }
@@ -81,7 +81,7 @@ final class CoreDataController {
         let context = persistentContainer.viewContext
 
         if context.hasChanges {
-            context.performAndWait {
+            context.performAndWait { // todo: check - has to be done on DispatchQueue.main.
                 try? context.save()
             }
         }

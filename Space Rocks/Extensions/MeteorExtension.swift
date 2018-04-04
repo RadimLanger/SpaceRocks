@@ -8,7 +8,7 @@
 
 import CoreData
 
-extension Meteorite: DateFormatterAccessing {
+extension Meteorite: DateComponentsAccessing { // TODO: move to manually generated Meteorite when rdy
 
     convenience init?(
         context: NSManagedObjectContext,
