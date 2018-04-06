@@ -10,10 +10,19 @@ import UIKit
 
 final class AppCoordinator: Coordinator {
 
-    let window = UIWindow()
+    private let window: UIWindow
+
+    init(window: UIWindow) {
+        self.window = window
+    }
+    
+    private let dependencyProvider: DependencyProvider = DependencyContainer()
+
+    private(set) lazy var meteorsLoader = MeteorsLoader(coreDataController: dependencyProvider.coreDataController)
 
     private var mapController = UIStoryboard.instantiateViewController(type: MapViewController.self)
     private var tableController = UIStoryboard.instantiateViewController(type: ResultsTableViewController.self)
+
 
     // Coordinator
 

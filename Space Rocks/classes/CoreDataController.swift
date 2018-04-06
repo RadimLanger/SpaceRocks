@@ -1,27 +1,15 @@
 //
-//  CoreDataAccessing.swift
+//  CoreDataController.swift
 //  Space Rocks
 //
-//  Created by Radim Langer on 02/04/2018.
+//  Created by Radim Langer on 06/04/2018.
 //  Copyright © 2018 Radim Langer. All rights reserved.
 //
 
-import CoreData
 import UIKit
-
-protocol CoreDataAccessing: AnyObject {
-
-}
-
-extension CoreDataAccessing { // TODO: at se to pak predava v coordinatoru jako dependency
-    var coreDataController: CoreDataController {
-        return CoreDataController.shared
-    }
-}
+import CoreData
 
 final class CoreDataController {
-
-    static let shared = CoreDataController()
 
     var managedContext: NSManagedObjectContext {
         return persistentContainer.viewContext
@@ -44,7 +32,7 @@ final class CoreDataController {
         sortBy: String? = nil,
         isAscending: Bool = true,
         predicate: NSPredicate? = nil
-    ) -> [Entity] {
+        ) -> [Entity] {
 
         let entityName = String(describing: entityClass)
         let request = NSFetchRequest<Entity>(entityName: entityName)
@@ -69,8 +57,8 @@ final class CoreDataController {
         guard
             let entity = NSEntityDescription.entity(forEntityName: entityName, in: managedContext),
             let object = NSManagedObject(entity: entity, insertInto: managedContext) as? Entity
-        else {
-            fatalError("coredata failed to create entity")
+            else {
+                fatalError("coredata failed to create entity")
         }
 
         return object

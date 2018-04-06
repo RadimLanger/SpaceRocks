@@ -8,9 +8,14 @@
 
 import Alamofire
 import SwiftyJSON
-import CoreData
 
-final class MeteorsLoader: CoreDataAccessing, DateComponentsAccessing {
+final class MeteorsLoader: DateComponentsAccessing {
+
+    private let coreDataController: CoreDataController
+
+    init(coreDataController: CoreDataController) {
+        self.coreDataController = coreDataController
+    }
 
     var meteorites: Meteorites {
 

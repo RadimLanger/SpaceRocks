@@ -12,7 +12,8 @@ extension UIStoryboard {
     static func instantiateViewController<ViewController>(type: ViewController.Type) -> ViewController {
 
         let name = String(describing: type)
+        let storyboardName = name + "Storyboard"
 
-        return UIStoryboard(name: name + "Storyboard", bundle: nil).instantiateViewController(withIdentifier: name) as! ViewController
+        return UIStoryboard(name: storyboardName, bundle: nil).instantiateViewController(withIdentifier: name) as! ViewController
     }
 }
