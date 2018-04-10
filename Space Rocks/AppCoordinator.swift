@@ -26,6 +26,8 @@ final class AppCoordinator: Coordinator {
 
     private func setupDataAndPresentControllers() {
 
+        meteorsLoader.delegate = self
+
         mapController.delegate = self
         tableController.delegate = self
         detailController.delegate = self
@@ -52,6 +54,12 @@ final class AppCoordinator: Coordinator {
         toController.addChildViewController(controller)
         toController.view.addSubview(controller.view)
         controller.didMove(toParentViewController: toController)
+    }
+}
+
+extension AppCoordinator: MeteorLoaderDelegate {
+    func meteorLoaderCouldntLoadDataDueMissingInternetConnection(_ loader: MeteorsLoader) {
+        mapController.present(AlertManager.noInternetConnectionAlert, animated: true, completion: nil)
     }
 }
 

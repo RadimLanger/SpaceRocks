@@ -22,6 +22,7 @@
 		D9414B1620722F8100261462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9414B1520722F8100261462 /* Assets.xcassets */; };
 		D9414B1920722F8100261462 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9414B1720722F8100261462 /* LaunchScreen.storyboard */; };
 		D9414B2420722F8100261462 /* Space_RocksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9414B2320722F8100261462 /* Space_RocksTests.swift */; };
+		D95E6DD2207D53A9000CE6D1 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E6DD1207D53A9000CE6D1 /* AlertManager.swift */; };
 		D967D5432079302800D067B6 /* MeteorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967D5422079302800D067B6 /* MeteorTableViewCell.swift */; };
 		D967D54520793F5E00D067B6 /* UIView+AddAutolayoutSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967D54420793F5E00D067B6 /* UIView+AddAutolayoutSubviews.swift */; };
 		D967D54720795D6100D067B6 /* CLLocationCoordinate2D+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967D54620795D6100D067B6 /* CLLocationCoordinate2D+Equatable.swift */; };
@@ -71,6 +72,7 @@
 		D9414B1F20722F8100261462 /* Space RocksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Space RocksTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9414B2320722F8100261462 /* Space_RocksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space_RocksTests.swift; sourceTree = "<group>"; };
 		D9414B2520722F8100261462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D95E6DD1207D53A9000CE6D1 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		D967D5422079302800D067B6 /* MeteorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorTableViewCell.swift; sourceTree = "<group>"; };
 		D967D54420793F5E00D067B6 /* UIView+AddAutolayoutSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddAutolayoutSubviews.swift"; sourceTree = "<group>"; };
 		D967D54620795D6100D067B6 /* CLLocationCoordinate2D+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Equatable.swift"; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				D917478220757F69001C6C25 /* ResultsTableViewController.swift */,
 				D967D54A207A12EC00D067B6 /* DetailViewController.swift */,
 				D967D54E207A245100D067B6 /* ScrollableSheetViewController.swift */,
+				D95E6DD1207D53A9000CE6D1 /* AlertManager.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				D9414B1420722F8100261462 /* Space_Rocks.xcdatamodeld in Sources */,
 				D91677C7207C15C800B6C29A /* Double+Round.swift in Sources */,
 				D967D54520793F5E00D067B6 /* UIView+AddAutolayoutSubviews.swift in Sources */,
+				D95E6DD2207D53A9000CE6D1 /* AlertManager.swift in Sources */,
 				D91677E4207D3AEB00B6C29A /* String+FirstThreeCharsAfterDot.swift in Sources */,
 				D967D54D207A202300D067B6 /* MKMapView+VisibleAnnotations.swift in Sources */,
 				D9ECD50A2075721D00F4A91A /* AppCoordinator.swift in Sources */,

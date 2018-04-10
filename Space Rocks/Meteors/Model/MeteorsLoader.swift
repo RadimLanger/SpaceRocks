@@ -9,11 +9,19 @@
 import Alamofire
 import SwiftyJSON
 
+protocol MeteorLoaderDelegate: AnyObject {
+    func meteorLoaderCouldntLoadDataDueMissingInternetConnection(_ loader: MeteorsLoader)
+}
+
 final class MeteorsLoader: DateComponentsAccessing {
+
+    weak var delegate: MeteorLoaderDelegate?
+
+    private let networkReachabilityManager = Alamofire.NetworkReachabilityManager()
 
     private let coreDataController: CoreDataController
 
-    private let storage = UserDefaults()
+    private let storage = UserDefaults.standard
 
     init(coreDataController: CoreDataController) {
         self.coreDataController = coreDataController
@@ -35,11 +43,26 @@ final class MeteorsLoader: DateComponentsAccessing {
         return calendar.dateComponents([.day], from: lastUpdateDate, to: Date()).day! >= 1
     }
 
+    private func listenForInternetChangeAndLoadIfAvailable(completion: @escaping ([Meteorite]) -> Void) {
+        networkReachabilityManager?.listener = { [weak self] _ in
+            if self?.networkReachabilityManager?.isReachable ?? false {
+                self?.networkReachabilityManager?.stopListening()
+                self?.fetchDataFromAPI(completion: completion)
+            }
+        }
+    }
+
     func fetchDataFromAPI(completion: @escaping ([Meteorite]) -> Void) {
 
         guard shouldFetchNewData
         else {
             completion(meteorites)
+            return
+        }
+
+        if networkReachabilityManager?.isReachable ?? false == false {
+            listenForInternetChangeAndLoadIfAvailable(completion: completion)
+            delegate?.meteorLoaderCouldntLoadDataDueMissingInternetConnection(self)
             return
         }
 
