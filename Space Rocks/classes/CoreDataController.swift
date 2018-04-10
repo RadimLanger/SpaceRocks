@@ -26,6 +26,13 @@ final class CoreDataController {
         return container
     }()
 
+    func deleteAllEntities<Entity: NSManagedObject>(entityClass: Entity.Type) {
+
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: entityClass))
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+
+        _ = try? managedContext.execute(deleteRequest)
+    }
 
     func retrieve<Entity: NSManagedObject>(
         entityClass: Entity.Type,

@@ -66,6 +66,10 @@ final class MeteorsLoader: DateComponentsAccessing {
             return
         }
 
+         // i know i could fetch entities by predicate and then update them, but it's for discussion...
+        coreDataController.deleteAllEntities(entityClass: Meteorite.self)
+        coreDataController.save()
+
         let APIURLString = "https://data.nasa.gov/resource/y77d-th95.json?$where=year >= '2011-01-01T00:00:00'"
         let header = ["X-App-Token": "glEDYc5VHKpULc6er0kZlvZIv"]
 
