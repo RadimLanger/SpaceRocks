@@ -1,5 +1,5 @@
 //
-//  StoryboardExtension.swift
+//  Storyboard+InstantiateController.swift
 //  Space Rocks
 //
 //  Created by Radim Langer on 04/04/2018.

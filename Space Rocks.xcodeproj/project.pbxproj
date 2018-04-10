@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		5670308F44CFAC9AEEC297FD /* Pods_Space_RocksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB9DC0570EB42DB2543F45C /* Pods_Space_RocksTests.framework */; };
 		5F32D0C9A012E14EDC05AAA8 /* Pods_Space_Rocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA827C39EA2A7C4C23EA5DA4 /* Pods_Space_Rocks.framework */; };
-		D917477B20757C74001C6C25 /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D917477A20757C74001C6C25 /* StoryboardExtension.swift */; };
+		D9167776207A46B400B6C29A /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9167775207A46B400B6C29A /* DetailTableViewCell.swift */; };
+		D91677C7207C15C800B6C29A /* Double+Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91677C6207C15C800B6C29A /* Double+Round.swift */; };
+		D917477B20757C74001C6C25 /* Storyboard+InstantiateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D917477A20757C74001C6C25 /* Storyboard+InstantiateController.swift */; };
 		D917478320757F69001C6C25 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D917478220757F69001C6C25 /* ResultsTableViewController.swift */; };
 		D917478520758169001C6C25 /* ResultsTableViewControllerStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D917478420758169001C6C25 /* ResultsTableViewControllerStoryboard.storyboard */; };
 		D928EC3D2078070900BAB52E /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D928EC3C2078070900BAB52E /* CoreDataController.swift */; };
@@ -19,6 +21,13 @@
 		D9414B1620722F8100261462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9414B1520722F8100261462 /* Assets.xcassets */; };
 		D9414B1920722F8100261462 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9414B1720722F8100261462 /* LaunchScreen.storyboard */; };
 		D9414B2420722F8100261462 /* Space_RocksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9414B2320722F8100261462 /* Space_RocksTests.swift */; };
+		D967D5432079302800D067B6 /* MeteorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967D5422079302800D067B6 /* MeteorTableViewCell.swift */; };
+		D967D54520793F5E00D067B6 /* UIView+AddAutolayoutSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967D54420793F5E00D067B6 /* UIView+AddAutolayoutSubviews.swift */; };
+		D967D54720795D6100D067B6 /* CLLocationCoordinate2D+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967D54620795D6100D067B6 /* CLLocationCoordinate2D+Equatable.swift */; };
+		D967D549207A12DB00D067B6 /* DetailViewControllerStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D967D548207A12DB00D067B6 /* DetailViewControllerStoryboard.storyboard */; };
+		D967D54B207A12EC00D067B6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967D54A207A12EC00D067B6 /* DetailViewController.swift */; };
+		D967D54D207A202300D067B6 /* MKMapView+VisibleAnnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967D54C207A202300D067B6 /* MKMapView+VisibleAnnotations.swift */; };
+		D967D54F207A245100D067B6 /* ScrollableSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967D54E207A245100D067B6 /* ScrollableSheetViewController.swift */; };
 		D9BED3BE207236880016F93B /* MeteorsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BED3BD207236880016F93B /* MeteorsLoader.swift */; };
 		D9BED3C020723ECB0016F93B /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BED3BF20723ECB0016F93B /* DependencyProvider.swift */; };
 		D9BED3DB207247A10016F93B /* MeteorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BED3DA207247A10016F93B /* MeteorExtension.swift */; };
@@ -44,7 +53,9 @@
 		8D80CE5C98F21B525A4AF38D /* Pods-Space Rocks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Space Rocks.release.xcconfig"; path = "Pods/Target Support Files/Pods-Space Rocks/Pods-Space Rocks.release.xcconfig"; sourceTree = "<group>"; };
 		AD7A9C5A3CA4DDCD515B2D95 /* Pods-Space Rocks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Space Rocks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Space Rocks/Pods-Space Rocks.debug.xcconfig"; sourceTree = "<group>"; };
 		CDB9DC0570EB42DB2543F45C /* Pods_Space_RocksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Space_RocksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D917477A20757C74001C6C25 /* StoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
+		D9167775207A46B400B6C29A /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		D91677C6207C15C800B6C29A /* Double+Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Round.swift"; sourceTree = "<group>"; };
+		D917477A20757C74001C6C25 /* Storyboard+InstantiateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+InstantiateController.swift"; sourceTree = "<group>"; };
 		D917478220757F69001C6C25 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		D917478420758169001C6C25 /* ResultsTableViewControllerStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultsTableViewControllerStoryboard.storyboard; sourceTree = "<group>"; };
 		D928EC3C2078070900BAB52E /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataController.swift; path = classes/CoreDataController.swift; sourceTree = "<group>"; };
@@ -58,6 +69,13 @@
 		D9414B1F20722F8100261462 /* Space RocksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Space RocksTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9414B2320722F8100261462 /* Space_RocksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space_RocksTests.swift; sourceTree = "<group>"; };
 		D9414B2520722F8100261462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D967D5422079302800D067B6 /* MeteorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorTableViewCell.swift; sourceTree = "<group>"; };
+		D967D54420793F5E00D067B6 /* UIView+AddAutolayoutSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddAutolayoutSubviews.swift"; sourceTree = "<group>"; };
+		D967D54620795D6100D067B6 /* CLLocationCoordinate2D+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Equatable.swift"; sourceTree = "<group>"; };
+		D967D548207A12DB00D067B6 /* DetailViewControllerStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewControllerStoryboard.storyboard; sourceTree = "<group>"; };
+		D967D54A207A12EC00D067B6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D967D54C207A202300D067B6 /* MKMapView+VisibleAnnotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+VisibleAnnotations.swift"; sourceTree = "<group>"; };
+		D967D54E207A245100D067B6 /* ScrollableSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableSheetViewController.swift; sourceTree = "<group>"; };
 		D9BED3BD207236880016F93B /* MeteorsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorsLoader.swift; sourceTree = "<group>"; };
 		D9BED3BF20723ECB0016F93B /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
 		D9BED3DA207247A10016F93B /* MeteorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorExtension.swift; sourceTree = "<group>"; };
@@ -112,7 +130,11 @@
 			isa = PBXGroup;
 			children = (
 				D9BED3DA207247A10016F93B /* MeteorExtension.swift */,
-				D917477A20757C74001C6C25 /* StoryboardExtension.swift */,
+				D917477A20757C74001C6C25 /* Storyboard+InstantiateController.swift */,
+				D967D54420793F5E00D067B6 /* UIView+AddAutolayoutSubviews.swift */,
+				D967D54620795D6100D067B6 /* CLLocationCoordinate2D+Equatable.swift */,
+				D967D54C207A202300D067B6 /* MKMapView+VisibleAnnotations.swift */,
+				D91677C6207C15C800B6C29A /* Double+Round.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -130,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				D917478120757E84001C6C25 /* Model */,
-				D917478020757E77001C6C25 /* Storyboards */,
+				D917478020757E77001C6C25 /* StoryboardsAndViews */,
 				D917477F20757E6E001C6C25 /* Controllers */,
 			);
 			path = Meteors;
@@ -141,16 +163,22 @@
 			children = (
 				D9414B0D20722F8100261462 /* MapViewController.swift */,
 				D917478220757F69001C6C25 /* ResultsTableViewController.swift */,
+				D967D54A207A12EC00D067B6 /* DetailViewController.swift */,
+				D967D54E207A245100D067B6 /* ScrollableSheetViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		D917478020757E77001C6C25 /* Storyboards */ = {
+		D917478020757E77001C6C25 /* StoryboardsAndViews */ = {
 			isa = PBXGroup;
 			children = (
 				D9ECD50B207574D900F4A91A /* MapViewControllerStoryboard.storyboard */,
 				D917478420758169001C6C25 /* ResultsTableViewControllerStoryboard.storyboard */,
+				D967D548207A12DB00D067B6 /* DetailViewControllerStoryboard.storyboard */,
+				D967D5422079302800D067B6 /* MeteorTableViewCell.swift */,
+				D9167775207A46B400B6C29A /* DetailTableViewCell.swift */,
 			);
+			name = StoryboardsAndViews;
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
@@ -302,6 +330,7 @@
 				D9414B1920722F8100261462 /* LaunchScreen.storyboard in Resources */,
 				D9414B1620722F8100261462 /* Assets.xcassets in Resources */,
 				D9ECD50C207574D900F4A91A /* MapViewControllerStoryboard.storyboard in Resources */,
+				D967D549207A12DB00D067B6 /* DetailViewControllerStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,16 +459,24 @@
 			files = (
 				D9ECD50820756F9E00F4A91A /* Coordinator.swift in Sources */,
 				D9BED3C020723ECB0016F93B /* DependencyProvider.swift in Sources */,
+				D967D54720795D6100D067B6 /* CLLocationCoordinate2D+Equatable.swift in Sources */,
 				D928EC3D2078070900BAB52E /* CoreDataController.swift in Sources */,
 				D9BED3DB207247A10016F93B /* MeteorExtension.swift in Sources */,
 				D9BED3BE207236880016F93B /* MeteorsLoader.swift in Sources */,
 				D9BED3DD20724D170016F93B /* SharedDateFormatter.swift in Sources */,
+				D967D54B207A12EC00D067B6 /* DetailViewController.swift in Sources */,
+				D967D5432079302800D067B6 /* MeteorTableViewCell.swift in Sources */,
 				D9414B1420722F8100261462 /* Space_Rocks.xcdatamodeld in Sources */,
+				D91677C7207C15C800B6C29A /* Double+Round.swift in Sources */,
+				D967D54520793F5E00D067B6 /* UIView+AddAutolayoutSubviews.swift in Sources */,
+				D967D54D207A202300D067B6 /* MKMapView+VisibleAnnotations.swift in Sources */,
 				D9ECD50A2075721D00F4A91A /* AppCoordinator.swift in Sources */,
 				D9414B0E20722F8100261462 /* MapViewController.swift in Sources */,
-				D917477B20757C74001C6C25 /* StoryboardExtension.swift in Sources */,
+				D917477B20757C74001C6C25 /* Storyboard+InstantiateController.swift in Sources */,
+				D967D54F207A245100D067B6 /* ScrollableSheetViewController.swift in Sources */,
 				D917478320757F69001C6C25 /* ResultsTableViewController.swift in Sources */,
 				D9414B0C20722F8100261462 /* AppDelegate.swift in Sources */,
+				D9167776207A46B400B6C29A /* DetailTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

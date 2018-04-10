@@ -17,13 +17,61 @@
                     <view key="view" contentMode="scaleToFill" id="kpD-tk-WpN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.4176712573142588" green="1" blue="0.41771735220082618" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" barStyle="black" searchBarStyle="prominent" placeholder="Seach" translatesAutoresizingMaskIntoConstraints="NO" id="aR3-GM-hAg">
+                                <rect key="frame" x="0.0" y="46" width="375" height="56"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="barTintColor" red="0.054959706962108612" green="0.47052466869354248" blue="0.85860329866409302" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TFz-mU-iKI">
+                                <rect key="frame" x="0.0" y="102" width="375" height="565"/>
+                                <color key="backgroundColor" red="0.032937366515398026" green="0.023542176932096481" blue="0.0061200717464089394" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="N0r-nn-wYU" id="osx-YP-gy1"/>
+                                    <outlet property="delegate" destination="N0r-nn-wYU" id="Q2B-bi-9zA"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbV-l4-7k3">
+                                <rect key="frame" x="162" y="30" width="50" height="6"/>
+                                <color key="backgroundColor" red="0.8042219883419689" green="0.8042219883419689" blue="0.8042219883419689" alpha="0.58203125" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="6" id="Ow2-w7-rW5"/>
+                                    <constraint firstAttribute="width" constant="50" id="uj3-w9-vlL"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.50577910958904104" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="aR3-GM-hAg" firstAttribute="top" secondItem="gbV-l4-7k3" secondAttribute="bottom" constant="10" id="ImL-Dm-yx6"/>
+                            <constraint firstItem="gbV-l4-7k3" firstAttribute="top" secondItem="fbB-Vz-dKx" secondAttribute="top" constant="10" id="RVR-4w-cpq"/>
+                            <constraint firstItem="fbB-Vz-dKx" firstAttribute="bottom" secondItem="TFz-mU-iKI" secondAttribute="bottom" id="Shs-Oq-QRk"/>
+                            <constraint firstItem="TFz-mU-iKI" firstAttribute="leading" secondItem="fbB-Vz-dKx" secondAttribute="leading" id="civ-PU-ySS"/>
+                            <constraint firstItem="aR3-GM-hAg" firstAttribute="leading" secondItem="fbB-Vz-dKx" secondAttribute="leading" id="eAj-wO-eWh"/>
+                            <constraint firstItem="TFz-mU-iKI" firstAttribute="top" secondItem="aR3-GM-hAg" secondAttribute="bottom" id="iG5-iy-GwP"/>
+                            <constraint firstItem="gbV-l4-7k3" firstAttribute="centerX" secondItem="fbB-Vz-dKx" secondAttribute="centerX" id="lO7-ns-aGk"/>
+                            <constraint firstItem="fbB-Vz-dKx" firstAttribute="trailing" secondItem="TFz-mU-iKI" secondAttribute="trailing" id="mka-Oa-qYu"/>
+                            <constraint firstItem="fbB-Vz-dKx" firstAttribute="trailing" secondItem="aR3-GM-hAg" secondAttribute="trailing" id="zch-R8-Ndi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fbB-Vz-dKx"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="TFz-mU-iKI" id="kUA-D8-SAJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q0S-y9-kXl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="370" y="-188"/>
+            <point key="canvasLocation" x="368.80000000000001" y="-188.45577211394306"/>
         </scene>
     </scenes>
 </document>

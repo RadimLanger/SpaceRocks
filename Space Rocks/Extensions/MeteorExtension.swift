@@ -7,6 +7,7 @@
 //
 
 import CoreData
+import MapKit
 
 extension Meteorite: DateComponentsAccessing { // TODO: move to manually generated Meteorite when rdy
 
@@ -37,6 +38,10 @@ extension Meteorite: DateComponentsAccessing { // TODO: move to manually generat
         self.fallInfo = fallInfo
         self.longitude = longitude
         self.latitude = latitude
+    }
+
+    var coordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
 }
 

@@ -17,13 +17,27 @@
                     <view key="view" contentMode="scaleToFill" id="six-kg-cXo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.47384570967010609" blue="0.32611873190244356" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nt2-Is-DuD">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99684733152389526" green="0.99205011129379272" blue="0.99197143316268921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="b0O-7R-bxQ" firstAttribute="trailing" secondItem="nt2-Is-DuD" secondAttribute="trailing" id="Aeb-dw-lHm"/>
+                            <constraint firstItem="nt2-Is-DuD" firstAttribute="top" secondItem="b0O-7R-bxQ" secondAttribute="top" id="Qq6-d4-uMX"/>
+                            <constraint firstItem="nt2-Is-DuD" firstAttribute="leading" secondItem="b0O-7R-bxQ" secondAttribute="leading" id="Upb-v4-Tmr"/>
+                            <constraint firstItem="b0O-7R-bxQ" firstAttribute="bottom" secondItem="nt2-Is-DuD" secondAttribute="bottom" id="mnu-Ui-WAA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="b0O-7R-bxQ"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="nt2-Is-DuD" id="OyN-qb-UcY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jfo-fd-yk7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="239" y="116"/>
+            <point key="canvasLocation" x="237.59999999999999" y="115.59220389805098"/>
         </scene>
     </scenes>
 </document>

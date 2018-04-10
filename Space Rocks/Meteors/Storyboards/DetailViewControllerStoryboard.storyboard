@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="Ubo-VH-yVh">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="A2m-Iy-Btg" customClass="DetailViewController" customModule="Space_Rocks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wu2-Wt-CS7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbn-Kc-Uxk">
+                                <rect key="frame" x="162" y="30" width="50" height="6"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="6" id="ACs-r6-2lI"/>
+                                    <constraint firstAttribute="width" constant="50" id="hdJ-5U-vL9"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L0I-Qj-MxG">
+                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
+                                <color key="backgroundColor" white="1" alpha="0.3678829308712121" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="A2m-Iy-Btg" id="XT5-xq-iLj"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pe1-i5-vN0">
+                                <rect key="frame" x="339" y="44" width="20" height="20"/>
+                                <color key="backgroundColor" red="0.076061882078647614" green="0.8463132381439209" blue="0.19366341829299927" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="7EH-MA-Vga"/>
+                                    <constraint firstAttribute="width" constant="20" id="was-IY-qLm"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="cross"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dismissButton:" destination="A2m-Iy-Btg" eventType="touchUpInside" id="Pd6-dp-eXU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.024538645520806313" green="0.019114671275019646" blue="0.036775831133127213" alpha="0.097227154356060608" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="L0I-Qj-MxG" firstAttribute="trailing" secondItem="q2L-u1-Qo4" secondAttribute="trailing" id="BTC-Uz-oEe"/>
+                            <constraint firstItem="sbn-Kc-Uxk" firstAttribute="centerX" secondItem="q2L-u1-Qo4" secondAttribute="centerX" id="GMv-7b-B6i"/>
+                            <constraint firstItem="L0I-Qj-MxG" firstAttribute="top" secondItem="Pe1-i5-vN0" secondAttribute="bottom" constant="12" id="Ijc-oy-5rv"/>
+                            <constraint firstItem="L0I-Qj-MxG" firstAttribute="leading" secondItem="q2L-u1-Qo4" secondAttribute="leading" id="TRi-6f-q5L"/>
+                            <constraint firstItem="q2L-u1-Qo4" firstAttribute="trailing" secondItem="Pe1-i5-vN0" secondAttribute="trailing" constant="16" id="ZyX-b8-rgS"/>
+                            <constraint firstItem="Pe1-i5-vN0" firstAttribute="top" secondItem="sbn-Kc-Uxk" secondAttribute="bottom" constant="8" id="bDN-cc-n2B"/>
+                            <constraint firstItem="sbn-Kc-Uxk" firstAttribute="top" secondItem="q2L-u1-Qo4" secondAttribute="top" constant="10" id="n8K-Bp-mIo"/>
+                            <constraint firstItem="L0I-Qj-MxG" firstAttribute="bottom" secondItem="q2L-u1-Qo4" secondAttribute="bottom" id="qte-5S-rU4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="q2L-u1-Qo4"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="L0I-Qj-MxG" id="gFA-sH-MyC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wNJ-Z5-2oU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-295.19999999999999" y="56.221889055472268"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cross" width="225" height="225"/>
+    </resources>
+</document>

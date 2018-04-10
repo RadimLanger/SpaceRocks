@@ -13,41 +13,48 @@ final class MeteorsLoader: DateComponentsAccessing {
 
     private let coreDataController: CoreDataController
 
+    private let storage = UserDefaults()
+
     init(coreDataController: CoreDataController) {
         self.coreDataController = coreDataController
     }
 
-    var meteorites: Meteorites {
+    private var meteorites: [Meteorite] {
+        return coreDataController.retrieve(entityClass: Meteorite.self)
+    }
 
-        let meteorites = coreDataController.retrieve(entityClass: Meteorites.self)
+    private var shouldFetchNewData: Bool {
 
-        guard meteorites.isEmpty == false else {
-            return coreDataController.create(entityClass: Meteorites.self)
+        let interval = storage.double(forKey: "lastSuccessfullUpdateInterval")
+
+        if meteorites.count == 0 || interval == 0.0 {
+            return true
         }
 
-        return meteorites.first!
+        let lastUpdateDate = Date(timeIntervalSince1970: interval)
+        return calendar.dateComponents([.day], from: lastUpdateDate, to: Date()).day! >= 1
     }
 
+    func fetchDataFromAPI(completion: @escaping ([Meteorite]) -> Void) {
 
-    var dataAreMoreThanOneDayOld: Bool { // todo: get rid of force unwrapping
-        return calendar.dateComponents([.day], from: meteorites.lastUpdateDate!, to: Date()).day! >= 1
-    }
-
-    func fetchDataFromAPI() {
+        guard shouldFetchNewData
+        else {
+            completion(meteorites)
+            return
+        }
 
         let APIURLString = "https://data.nasa.gov/resource/y77d-th95.json?$where=year >= '2011-01-01T00:00:00'"
         let header = ["X-App-Token": "glEDYc5VHKpULc6er0kZlvZIv"]
 
         guard let URL = APIURLString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
 
-        var newMeteorites = NSMutableSet() // TODO: generate it by yourself to use swift Set in CD
+        var newMeteorites = [Meteorite]()
 
         Alamofire.request(URL, method: .get, parameters: nil, headers: header).responseJSON { response in
 
             guard let json = response.result.value else { return }
 
             let jsonObject = JSON(json)
-
 
             jsonObject.forEach { _, subJSON in // TODO: check if there
                 let name = subJSON["name"].stringValue
@@ -68,16 +75,17 @@ final class MeteorsLoader: DateComponentsAccessing {
                     id: Int64(id),
                     fallInfo: fall,
                     longitude: longitude,
-                    latitude: latitude // TODO: some are missing longitude and latitude
+                    latitude: latitude // TODO: some are missing longitude and latitude - they are null
                 ) {
-                    newMeteorites.add(meteorite)
+                    newMeteorites.append(meteorite)
                 }
             }
 
-            self.meteorites.lastUpdateDate = Date()
-            self.meteorites.meteorites = newMeteorites.copy() as! NSSet
-
-            self.coreDataController.save()
+            DispatchQueue.main.async {
+                self.storage.set(Date().timeIntervalSince1970, forKey: "lastSuccessfullUpdateInterval")
+                self.coreDataController.save()
+                completion(newMeteorites)
+            }
         }
     }
 }
