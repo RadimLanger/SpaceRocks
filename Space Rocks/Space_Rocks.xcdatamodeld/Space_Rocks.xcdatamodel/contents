@@ -9,14 +9,8 @@
         <attribute name="mass" attributeType="String" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="recClass" attributeType="String" syncable="YES"/>
-        <relationship name="meteorites" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Meteorites" inverseName="meteorites" inverseEntity="Meteorites" syncable="YES"/>
-    </entity>
-    <entity name="Meteorites" representedClassName="Meteorites" syncable="YES" codeGenerationType="class">
-        <attribute name="lastUpdateDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <relationship name="meteorites" toMany="YES" deletionRule="Nullify" destinationEntity="Meteorite" inverseName="meteorites" inverseEntity="Meteorite" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Meteorite" positionX="-63" positionY="-18" width="128" height="180"/>
-        <element name="Meteorites" positionX="-54" positionY="-9" width="128" height="75"/>
+        <element name="Meteorite" positionX="-63" positionY="-18" width="128" height="163"/>
     </elements>
 </model>
