@@ -36,7 +36,7 @@ final class AppCoordinator: Coordinator {
             self.move(controller: self.tableController, toController: self.mapController)
             self.move(controller: self.detailController, toController: self.mapController)
 
-            self.tableController.meteorites = meteorites
+            self.tableController.allMeteorites = meteorites
             self.mapController.meteorites = meteorites
         }
     }
@@ -66,7 +66,8 @@ extension AppCoordinator: MeteorLoaderDelegate {
 extension AppCoordinator: MapViewControllerDelegate {
 
     func mapViewControllerDidChangeRegion(_ controller: MapViewController, _ visibleMeteorites: [Meteorite]) {
-        tableController.meteorites = visibleMeteorites
+        tableController.resetMeteoritesToAll()
+        tableController.searchBar.endEditing(true)
     }
 
     func mapViewControllerDidSelectMeteorite(_ controller: MapViewController, _ meteorite: Meteorite) {
@@ -95,5 +96,6 @@ extension AppCoordinator: DetailViewControllerDelegate {
     func detailViewControllerDidTapDismissButton(_ controller: DetailViewController) {
         mapController.deselectSelectedAnnotation()
         tableController.animateSheetView(direction: .mid)
+        tableController.resetMeteoritesToAll()
     }
 }

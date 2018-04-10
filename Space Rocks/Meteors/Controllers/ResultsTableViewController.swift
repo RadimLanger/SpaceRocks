@@ -17,17 +17,33 @@ final class ResultsTableViewController: ScrollableSheetViewController {
 
     weak var delegate: ResultsTableViewControllerDelegate?
 
-    var meteorites = [Meteorite]() {
+    var allMeteorites = [Meteorite]() {
         didSet {
-            tableView.reloadData()
+            meteoritesToShow = allSortedMeteoritesByMass
         }
     }
+
+    var meteoritesToShow = [Meteorite]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+
+    private var allSortedMeteoritesByMass: [Meteorite] {
+        return allMeteorites.sorted(by: { Double($0.mass) ?? 0 > Double($1.mass) ?? 0 })
+    }
+
+    @IBOutlet var searchBar: UISearchBar!
 
     @IBOutlet var tableView: UITableView! {
         didSet {
             scrollableContentView = tableView
         }
     }
+
+    private var isEditingSearchBar = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,16 +64,21 @@ final class ResultsTableViewController: ScrollableSheetViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 300
     }
+
+    func resetMeteoritesToAll() {
+        meteoritesToShow = allSortedMeteoritesByMass
+    }
 }
 
 extension ResultsTableViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        let selectedMeteorite = meteorites[indexPath.row]
+        let selectedMeteorite = meteoritesToShow[indexPath.row]
 
         tableView.deselectRow(at: indexPath, animated: false)
 
+        searchBar.endEditing(true)
         animateSheetView(direction: .bottomHiddden)
         delegate?.tableViewControllerDidSelectMeteorite(self, selectedMeteorite)
     }
@@ -67,13 +88,13 @@ extension ResultsTableViewController: UITableViewDelegate {
 extension ResultsTableViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return meteorites.count
+        return meteoritesToShow.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let reuseIdentifier = String(describing: MeteorTableViewCell.self)
-        let meteorite = meteorites[indexPath.row]
+        let meteorite = meteoritesToShow[indexPath.row]
 
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as? MeteorTableViewCell ??
                     MeteorTableViewCell()
@@ -85,4 +106,27 @@ extension ResultsTableViewController: UITableViewDataSource {
         
         return cell
     }
+}
+
+extension ResultsTableViewController: UISearchBarDelegate {
+
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        animateSheetView(direction: .up)
+        isEditingSearchBar = true
+    }
+
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        animateSheetView(direction: .down)
+        meteoritesToShow = allSortedMeteoritesByMass
+        searchBar.text = ""
+        isEditingSearchBar = false
+    }
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+
+        let toShow = searchText.isEmpty ? allMeteorites : allMeteorites.filter { $0.name.contains(searchText) }
+
+        meteoritesToShow = toShow
+    }
+
 }

@@ -43,7 +43,7 @@ final class MapViewController: UIViewController {
         let annotations = meteorites.map {
             mkPointAnnotation(
                 coordinate: $0.coordinate,
-                title: $0.name!,
+                title: $0.name,
                 subtitle: $0.fallInfo!
             )
         }

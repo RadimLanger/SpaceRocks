@@ -55,6 +55,6 @@ final class DetailTableViewCell: UITableViewCell {
             detailLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
             detailLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
             detailLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -padding)
-            ])
+        ])
     }
 }

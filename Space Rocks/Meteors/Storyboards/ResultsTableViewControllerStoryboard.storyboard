@@ -23,6 +23,9 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="barTintColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="N0r-nn-wYU" id="2k2-hh-B2j"/>
+                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TFz-mU-iKI">
                                 <rect key="frame" x="0.0" y="102" width="375" height="565"/>
@@ -66,6 +69,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="aR3-GM-hAg" id="1Z7-bQ-FSk"/>
                         <outlet property="tableView" destination="TFz-mU-iKI" id="kUA-D8-SAJ"/>
                     </connections>
                 </viewController>
