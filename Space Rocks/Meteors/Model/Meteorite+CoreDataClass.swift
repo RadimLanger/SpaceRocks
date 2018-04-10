@@ -1,15 +1,18 @@
 //
-//  MeteorExtension.swift
+//  Meteorite+CoreDataClass.swift
 //  Space Rocks
 //
-//  Created by Radim Langer on 02/04/2018.
+//  Created by Radim Langer on 10/04/2018.
 //  Copyright © 2018 Radim Langer. All rights reserved.
 //
+//
 
+import Foundation
 import CoreData
 import MapKit
 
-extension Meteorite: DateComponentsAccessing {
+@objc(Meteorite)
+public class Meteorite: NSManagedObject, DateComponentsAccessing {
 
     convenience init?(
         context: NSManagedObjectContext,
@@ -21,8 +24,8 @@ extension Meteorite: DateComponentsAccessing {
         fallInfo: String,
         longitude: Double,
         latitude: Double
-    ) {
-        
+        ) {
+
         self.init(context: context)
 
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
@@ -44,4 +47,3 @@ extension Meteorite: DateComponentsAccessing {
         return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
 }
-

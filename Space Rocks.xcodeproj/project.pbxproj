@@ -23,6 +23,8 @@
 		D9414B1920722F8100261462 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9414B1720722F8100261462 /* LaunchScreen.storyboard */; };
 		D9414B2420722F8100261462 /* Space_RocksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9414B2320722F8100261462 /* Space_RocksTests.swift */; };
 		D95E6DD2207D53A9000CE6D1 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E6DD1207D53A9000CE6D1 /* AlertManager.swift */; };
+		D95E6DD5207D6802000CE6D1 /* Meteorite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E6DD3207D6802000CE6D1 /* Meteorite+CoreDataClass.swift */; };
+		D95E6DD6207D6802000CE6D1 /* Meteorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E6DD4207D6802000CE6D1 /* Meteorite+CoreDataProperties.swift */; };
 		D967D5432079302800D067B6 /* MeteorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967D5422079302800D067B6 /* MeteorTableViewCell.swift */; };
 		D967D54520793F5E00D067B6 /* UIView+AddAutolayoutSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967D54420793F5E00D067B6 /* UIView+AddAutolayoutSubviews.swift */; };
 		D967D54720795D6100D067B6 /* CLLocationCoordinate2D+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967D54620795D6100D067B6 /* CLLocationCoordinate2D+Equatable.swift */; };
@@ -32,7 +34,6 @@
 		D967D54F207A245100D067B6 /* ScrollableSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967D54E207A245100D067B6 /* ScrollableSheetViewController.swift */; };
 		D9BED3BE207236880016F93B /* MeteorsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BED3BD207236880016F93B /* MeteorsLoader.swift */; };
 		D9BED3C020723ECB0016F93B /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BED3BF20723ECB0016F93B /* DependencyProvider.swift */; };
-		D9BED3DB207247A10016F93B /* MeteorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BED3DA207247A10016F93B /* MeteorExtension.swift */; };
 		D9BED3DD20724D170016F93B /* SharedDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BED3DC20724D170016F93B /* SharedDateFormatter.swift */; };
 		D9ECD50820756F9E00F4A91A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ECD50720756F9E00F4A91A /* Coordinator.swift */; };
 		D9ECD50A2075721D00F4A91A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ECD5092075721D00F4A91A /* AppCoordinator.swift */; };
@@ -61,7 +62,7 @@
 		D917477A20757C74001C6C25 /* Storyboard+InstantiateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+InstantiateController.swift"; sourceTree = "<group>"; };
 		D917478220757F69001C6C25 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		D917478420758169001C6C25 /* ResultsTableViewControllerStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultsTableViewControllerStoryboard.storyboard; sourceTree = "<group>"; };
-		D928EC3C2078070900BAB52E /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataController.swift; path = classes/CoreDataController.swift; sourceTree = "<group>"; };
+		D928EC3C2078070900BAB52E /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		D9414B0820722F8100261462 /* Space Rocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Space Rocks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9414B0B20722F8100261462 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9414B0D20722F8100261462 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +74,8 @@
 		D9414B2320722F8100261462 /* Space_RocksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space_RocksTests.swift; sourceTree = "<group>"; };
 		D9414B2520722F8100261462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D95E6DD1207D53A9000CE6D1 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		D95E6DD3207D6802000CE6D1 /* Meteorite+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meteorite+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D95E6DD4207D6802000CE6D1 /* Meteorite+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meteorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D967D5422079302800D067B6 /* MeteorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorTableViewCell.swift; sourceTree = "<group>"; };
 		D967D54420793F5E00D067B6 /* UIView+AddAutolayoutSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddAutolayoutSubviews.swift"; sourceTree = "<group>"; };
 		D967D54620795D6100D067B6 /* CLLocationCoordinate2D+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Equatable.swift"; sourceTree = "<group>"; };
@@ -82,7 +85,6 @@
 		D967D54E207A245100D067B6 /* ScrollableSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableSheetViewController.swift; sourceTree = "<group>"; };
 		D9BED3BD207236880016F93B /* MeteorsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorsLoader.swift; sourceTree = "<group>"; };
 		D9BED3BF20723ECB0016F93B /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
-		D9BED3DA207247A10016F93B /* MeteorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorExtension.swift; sourceTree = "<group>"; };
 		D9BED3DC20724D170016F93B /* SharedDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDateFormatter.swift; sourceTree = "<group>"; };
 		D9ECD50720756F9E00F4A91A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		D9ECD5092075721D00F4A91A /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -133,7 +135,6 @@
 		D917477C20757DEC001C6C25 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D9BED3DA207247A10016F93B /* MeteorExtension.swift */,
 				D917477A20757C74001C6C25 /* Storyboard+InstantiateController.swift */,
 				D967D54420793F5E00D067B6 /* UIView+AddAutolayoutSubviews.swift */,
 				D967D54620795D6100D067B6 /* CLLocationCoordinate2D+Equatable.swift */,
@@ -171,6 +172,7 @@
 				D967D54A207A12EC00D067B6 /* DetailViewController.swift */,
 				D967D54E207A245100D067B6 /* ScrollableSheetViewController.swift */,
 				D95E6DD1207D53A9000CE6D1 /* AlertManager.swift */,
+				D928EC3C2078070900BAB52E /* CoreDataController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -191,6 +193,8 @@
 		D917478120757E84001C6C25 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D95E6DD3207D6802000CE6D1 /* Meteorite+CoreDataClass.swift */,
+				D95E6DD4207D6802000CE6D1 /* Meteorite+CoreDataProperties.swift */,
 				D9BED3BD207236880016F93B /* MeteorsLoader.swift */,
 			);
 			path = Model;
@@ -229,7 +233,6 @@
 				D9414B1A20722F8100261462 /* Info.plist */,
 				D917477D20757E2F001C6C25 /* Supporting Files */,
 				D917477C20757DEC001C6C25 /* Extensions */,
-				D928EC3C2078070900BAB52E /* CoreDataController.swift */,
 			);
 			path = "Space Rocks";
 			sourceTree = "<group>";
@@ -467,11 +470,12 @@
 				D9BED3C020723ECB0016F93B /* DependencyProvider.swift in Sources */,
 				D967D54720795D6100D067B6 /* CLLocationCoordinate2D+Equatable.swift in Sources */,
 				D928EC3D2078070900BAB52E /* CoreDataController.swift in Sources */,
-				D9BED3DB207247A10016F93B /* MeteorExtension.swift in Sources */,
 				D9BED3BE207236880016F93B /* MeteorsLoader.swift in Sources */,
+				D95E6DD6207D6802000CE6D1 /* Meteorite+CoreDataProperties.swift in Sources */,
 				D9BED3DD20724D170016F93B /* SharedDateFormatter.swift in Sources */,
 				D967D54B207A12EC00D067B6 /* DetailViewController.swift in Sources */,
 				D967D5432079302800D067B6 /* MeteorTableViewCell.swift in Sources */,
+				D95E6DD5207D6802000CE6D1 /* Meteorite+CoreDataClass.swift in Sources */,
 				D9414B1420722F8100261462 /* Space_Rocks.xcdatamodeld in Sources */,
 				D91677C7207C15C800B6C29A /* Double+Round.swift in Sources */,
 				D967D54520793F5E00D067B6 /* UIView+AddAutolayoutSubviews.swift in Sources */,
