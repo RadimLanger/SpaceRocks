@@ -129,6 +129,8 @@ extension ScrollableSheetViewController {
         blurEffectView.alpha = 0.9
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         blurEffectView.frame = view.bounds
+        blurEffectView.layer.cornerRadius = 15
+        blurEffectView.clipsToBounds = true
         view.insertSubview(blurEffectView, at: 0)
     }
 }

@@ -22,7 +22,6 @@ final class DetailViewController: ScrollableSheetViewController, DateComponentsA
         case id(String)
         case longitudeAndLatitude(String)
         case mass(String)
-        case name(String)
         case recClass(String)
 
         var titleText: String {
@@ -32,7 +31,6 @@ final class DetailViewController: ScrollableSheetViewController, DateComponentsA
                 case .id:                    return "ID:"
                 case .longitudeAndLatitude:  return "Coordinates:"
                 case .mass:                  return "Mass:"
-                case .name:                  return "Name:"
                 case .recClass:              return "Class:"
             }
         }
@@ -43,7 +41,6 @@ final class DetailViewController: ScrollableSheetViewController, DateComponentsA
                 case let .id(detail):                   return detail
                 case let .longitudeAndLatitude(detail): return detail
                 case let .mass(detail):                 return detail
-                case let .name(detail):                 return detail
                 case let .recClass(detail):             return detail
             }
         }
@@ -54,8 +51,11 @@ final class DetailViewController: ScrollableSheetViewController, DateComponentsA
     var meteorite: Meteorite? {
         didSet {
             tableView.reloadData()
+            nameLabel.text = meteorite?.name
         }
     }
+
+    @IBOutlet var nameLabel: UILabel!
 
     @IBOutlet var tableView: UITableView! {
         didSet {
@@ -101,10 +101,7 @@ extension DetailViewController: UITableViewDataSource {
             cellsConfiguration.append(.fallInfo(fallInfo))
         }
         if let mass = meteorite.mass {
-            cellsConfiguration.append(.mass(mass))
-        }
-        if let name = meteorite.name {
-            cellsConfiguration.append(.name(name))
+            cellsConfiguration.append(.mass(mass.firstThreeCharactersAfterDot() + " (g)"))
         }
         if let recClass = meteorite.recClass {
             cellsConfiguration.append(.recClass(recClass))

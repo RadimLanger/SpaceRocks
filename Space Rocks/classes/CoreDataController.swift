@@ -69,7 +69,7 @@ final class CoreDataController {
         let context = persistentContainer.viewContext
 
         if context.hasChanges {
-            context.performAndWait { // todo: check - has to be done on DispatchQueue.main.
+            context.performAndWait {
                 try? context.save()
             }
         }

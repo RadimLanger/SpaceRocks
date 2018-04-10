@@ -12,7 +12,9 @@ final class MeteorTableViewCell: UITableViewCell {
 
     let titleLabel: UILabel = {
         let label = UILabel()
+        label.alpha = 0.9
         label.backgroundColor = .clear
+        label.textColor = .white
         return label
     }()
 
@@ -20,6 +22,8 @@ final class MeteorTableViewCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont(name: label.font.fontName, size: 14)
         label.backgroundColor = .clear
+        label.alpha = 0.9
+        label.textColor = .white
         return label
     }()
 
@@ -34,6 +38,12 @@ final class MeteorTableViewCell: UITableViewCell {
 
     required init?(coder aDecoder: NSCoder) {
         return nil
+    }
+
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        UIView.animate(withDuration: 0.1) {
+            self.contentView.backgroundColor = highlighted ? UIColor.white.withAlphaComponent(0.2) : .clear
+        }
     }
 
     private func setupConstraints() {

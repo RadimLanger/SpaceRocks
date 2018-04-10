@@ -34,6 +34,10 @@ final class MapViewController: UIViewController {
 
     }
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     private func addAnotations() {
 
         let annotations = meteorites.map {

@@ -56,6 +56,8 @@ extension ResultsTableViewController: UITableViewDelegate {
 
         let selectedMeteorite = meteorites[indexPath.row]
 
+        tableView.deselectRow(at: indexPath, animated: false)
+
         animateSheetView(direction: .bottomHiddden)
         delegate?.tableViewControllerDidSelectMeteorite(self, selectedMeteorite)
     }
@@ -76,9 +78,11 @@ extension ResultsTableViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as? MeteorTableViewCell ??
                     MeteorTableViewCell()
 
-        cell.titleLabel.text = meteorite.name
-        cell.detailLabel.text = (meteorite.mass ?? "") + " (g)"
+        let massString = (meteorite.mass ?? "").firstThreeCharactersAfterDot() + " (g)"
 
+        cell.titleLabel.text = meteorite.name
+        cell.detailLabel.text = massString
+        // todo: sort meteorites by mass
         return cell
     }
 }

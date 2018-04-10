@@ -10,10 +10,19 @@ import UIKit
 
 final class DetailTableViewCell: UITableViewCell {
 
-    let titleLabel = UILabel()
+    let titleLabel: UILabel = {
+        let label = UILabel()
+        label.alpha = 0.9
+        label.backgroundColor = .clear
+        label.textColor = .white
+        return label
+    }()
     let detailLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: label.font.fontName, size: 14)
+        label.alpha = 0.9
+        label.backgroundColor = .clear
+        label.textColor = .white
         return label
     }()
 
@@ -22,8 +31,6 @@ final class DetailTableViewCell: UITableViewCell {
 
         contentView.addAutolayoutSubviews(titleLabel, detailLabel)
 
-        titleLabel.backgroundColor = .clear
-        detailLabel.backgroundColor = .clear
         backgroundColor = .clear
         contentView.backgroundColor = .clear
         setupConstraints()

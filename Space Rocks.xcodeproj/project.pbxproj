@@ -11,6 +11,7 @@
 		5F32D0C9A012E14EDC05AAA8 /* Pods_Space_Rocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA827C39EA2A7C4C23EA5DA4 /* Pods_Space_Rocks.framework */; };
 		D9167776207A46B400B6C29A /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9167775207A46B400B6C29A /* DetailTableViewCell.swift */; };
 		D91677C7207C15C800B6C29A /* Double+Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91677C6207C15C800B6C29A /* Double+Round.swift */; };
+		D91677E4207D3AEB00B6C29A /* String+FirstThreeCharsAfterDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91677E3207D3AEB00B6C29A /* String+FirstThreeCharsAfterDot.swift */; };
 		D917477B20757C74001C6C25 /* Storyboard+InstantiateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D917477A20757C74001C6C25 /* Storyboard+InstantiateController.swift */; };
 		D917478320757F69001C6C25 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D917478220757F69001C6C25 /* ResultsTableViewController.swift */; };
 		D917478520758169001C6C25 /* ResultsTableViewControllerStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D917478420758169001C6C25 /* ResultsTableViewControllerStoryboard.storyboard */; };
@@ -55,6 +56,7 @@
 		CDB9DC0570EB42DB2543F45C /* Pods_Space_RocksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Space_RocksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9167775207A46B400B6C29A /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		D91677C6207C15C800B6C29A /* Double+Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Round.swift"; sourceTree = "<group>"; };
+		D91677E3207D3AEB00B6C29A /* String+FirstThreeCharsAfterDot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+FirstThreeCharsAfterDot.swift"; sourceTree = "<group>"; };
 		D917477A20757C74001C6C25 /* Storyboard+InstantiateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+InstantiateController.swift"; sourceTree = "<group>"; };
 		D917478220757F69001C6C25 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		D917478420758169001C6C25 /* ResultsTableViewControllerStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultsTableViewControllerStoryboard.storyboard; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				D967D54620795D6100D067B6 /* CLLocationCoordinate2D+Equatable.swift */,
 				D967D54C207A202300D067B6 /* MKMapView+VisibleAnnotations.swift */,
 				D91677C6207C15C800B6C29A /* Double+Round.swift */,
+				D91677E3207D3AEB00B6C29A /* String+FirstThreeCharsAfterDot.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				D9414B1420722F8100261462 /* Space_Rocks.xcdatamodeld in Sources */,
 				D91677C7207C15C800B6C29A /* Double+Round.swift in Sources */,
 				D967D54520793F5E00D067B6 /* UIView+AddAutolayoutSubviews.swift in Sources */,
+				D91677E4207D3AEB00B6C29A /* String+FirstThreeCharsAfterDot.swift in Sources */,
 				D967D54D207A202300D067B6 /* MKMapView+VisibleAnnotations.swift in Sources */,
 				D9ECD50A2075721D00F4A91A /* AppCoordinator.swift in Sources */,
 				D9414B0E20722F8100261462 /* MapViewController.swift in Sources */,
