@@ -78,11 +78,11 @@ extension ResultsTableViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as? MeteorTableViewCell ??
                     MeteorTableViewCell()
 
-        let massString = (meteorite.mass ?? "").firstThreeCharactersAfterDot() + " (g)"
+        let massString = meteorite.mass.firstThreeCharactersAfterDot() + " (g)"
 
         cell.titleLabel.text = meteorite.name
         cell.detailLabel.text = massString
-        // todo: sort meteorites by mass
+        
         return cell
     }
 }

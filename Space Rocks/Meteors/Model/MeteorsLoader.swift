@@ -20,7 +20,7 @@ final class MeteorsLoader: DateComponentsAccessing {
     }
 
     private var meteorites: [Meteorite] {
-        return coreDataController.retrieve(entityClass: Meteorite.self)
+        return coreDataController.retrieve(entityClass: Meteorite.self, sortBy: "mass", isAscending: false)
     }
 
     private var shouldFetchNewData: Bool {
@@ -84,7 +84,7 @@ final class MeteorsLoader: DateComponentsAccessing {
             DispatchQueue.main.async {
                 self.storage.set(Date().timeIntervalSince1970, forKey: "lastSuccessfullUpdateInterval")
                 self.coreDataController.save()
-                completion(newMeteorites)
+                completion(newMeteorites.sorted(by: { Double($0.mass) ?? 0 > Double($1.mass) ?? 0}))
             }
         }
     }

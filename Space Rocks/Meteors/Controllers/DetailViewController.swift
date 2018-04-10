@@ -100,9 +100,9 @@ extension DetailViewController: UITableViewDataSource {
         if let fallInfo = meteorite.fallInfo {
             cellsConfiguration.append(.fallInfo(fallInfo))
         }
-        if let mass = meteorite.mass {
-            cellsConfiguration.append(.mass(mass.firstThreeCharactersAfterDot() + " (g)"))
-        }
+
+        cellsConfiguration.append(.mass(meteorite.mass.firstThreeCharactersAfterDot() + " (g)"))
+
         if let recClass = meteorite.recClass {
             cellsConfiguration.append(.recClass(recClass))
         }
