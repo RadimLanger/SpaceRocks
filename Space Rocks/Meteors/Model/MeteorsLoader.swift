@@ -83,7 +83,7 @@ final class MeteorsLoader: DateComponentsAccessing {
 
             let jsonObject = JSON(json)
 
-            jsonObject.forEach { _, subJSON in // TODO: check if there
+            jsonObject.forEach { _, subJSON in 
                 let name = subJSON["name"].stringValue
                 let mass = subJSON["mass"].stringValue
                 let year = subJSON["year"].stringValue
@@ -102,7 +102,7 @@ final class MeteorsLoader: DateComponentsAccessing {
                     id: Int64(id),
                     fallInfo: fall,
                     longitude: longitude,
-                    latitude: latitude // TODO: some are missing longitude and latitude - they are null
+                    latitude: latitude
                 ) {
                     newMeteorites.append(meteorite)
                 }

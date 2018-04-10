@@ -9,7 +9,7 @@
 import CoreData
 import MapKit
 
-extension Meteorite: DateComponentsAccessing { // TODO: move to manually generated Meteorite when rdy
+extension Meteorite: DateComponentsAccessing {
 
     convenience init?(
         context: NSManagedObjectContext,
